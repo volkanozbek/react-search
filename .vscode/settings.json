@@ -1,5 +1,5 @@
 {
   "terminal.integrated.env.windows": {
-    "PATH": "${env:PATH};${env:userprofile}/Desktop/Projects/node versions/node-v18.12.0-win-x64;"
+    "PATH": "${env:userprofile}/Desktop/Projects/node versions/node-v18.12.0-win-x64;${env:PATH};"
   }
 }
