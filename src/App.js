@@ -6,7 +6,7 @@ class App extends Component {
     super();
 
     this.state = {
-      name: { firstName: "AA", lastName: "VV" },
+      monster: [{ name: "AA1" }, { name: "BB2" }, { name: "CC3" }],
     };
   }
 
@@ -20,25 +20,9 @@ class App extends Component {
     return (
       <header className="App-header">
         <div className="App">
-          <h1 className="App-link">test</h1>
-          <p> {this.state.name.firstName} </p>
-          <p> {this.state.name.lastName} </p>
-          <button
-            onClick={() => {
-              this.setState(
-                () => {
-                  return {
-                    name: { firstName: "Volkan", lastName: "Özbek" },
-                  };
-                },
-                () => {
-                  console.log(this.state);
-                }
-              );
-            }}
-          >
-            test
-          </button>
+          {this.state.monster.map((m) => {
+            return <h1>{m.name}</h1>;
+          })}
         </div>
       </header>
     );
