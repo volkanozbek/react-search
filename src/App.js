@@ -9,9 +9,11 @@ class App extends Component {
       // monster: [{ name: "AA1" }, { name: "BB2" }, { name: "CC3" }],
       monsters: [],
     };
+    console.log("constructor");
   }
 
   componentDidMount() {
+    console.log("componentDidMount");
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((users) =>
@@ -27,6 +29,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("render");
     return (
       <header className="App-header">
         <div className="App">
