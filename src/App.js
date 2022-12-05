@@ -1,5 +1,6 @@
 import "./App.css";
 import { Component } from "react";
+import CardList from "./components/card-list/card-list.components";
 
 class App extends Component {
   constructor() {
@@ -51,14 +52,16 @@ class App extends Component {
             placeholder="search monsters"
             onChange={onSearchChange}
           ></input>
-          {filteredMonsters.map((m) => {
+
+          {/* {filteredMonsters.map((m) => {
             return (
               <div key={m.name}>
                 <h1>{m.name}</h1>
               </div>
             );
-          })}
+          })} */}
         </div>
+        <CardList />
       </header>
     );
   }
