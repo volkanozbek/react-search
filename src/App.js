@@ -33,6 +33,14 @@ class App extends Component {
     return (
       <header className="App-header">
         <div className="App">
+          <input
+            className="search-box"
+            type="search"
+            placeholder="search monsters"
+            onChange={(event) => {
+              console.log("event", event);
+            }}
+          ></input>
           {this.state.monsters.map((m) => {
             return (
               <div key={m.name}>
