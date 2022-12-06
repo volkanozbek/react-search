@@ -1,13 +1,13 @@
 import "./App.css";
 import { Component } from "react";
 import CardList from "./components/card-list/card-list.components";
+import SearchBox from "./components/search-box/search-box.components";
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      // monster: [{ name: "AA1" }, { name: "BB2" }, { name: "CC3" }],
       monsters: [],
       searchField: "",
     };
@@ -22,7 +22,7 @@ class App extends Component {
             return { monsters: users };
           },
           () => {
-            console.log(this.state);
+            // console.log(this.state);
           }
         )
       );
@@ -46,14 +46,9 @@ class App extends Component {
     return (
       <header className="App-header">
         <div className="App">
-          <input
-            className="search-box"
-            type="search"
-            placeholder="search monsters"
-            onChange={onSearchChange}
-          ></input>
+          <SearchBox onChangeHandler={onSearchChange} />
+          <CardList monsters={filteredMonsters} />
         </div>
-        <CardList monsters={filteredMonsters} />
       </header>
     );
   }
