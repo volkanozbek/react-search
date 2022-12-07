@@ -44,8 +44,8 @@ class App extends Component {
     });
 
     return (
-      <header className="App-header">
-        <div className="App">
+      <header>
+        <div>
           <SearchBox
             className="search-box"
             onChangeHandler={onSearchChange}

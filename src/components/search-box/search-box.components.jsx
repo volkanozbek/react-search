@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./search-box.styles.css";
 
 export class SearchBox extends Component {
   render() {
     return (
-      <div>
+      <div className="search-container">
         <input
           className={this.props.className}
           type="search"
