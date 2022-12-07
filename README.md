@@ -1,7 +1,6 @@
 Simple Search Project
 
 ![Demo](/public/assets/images/demo-1.png)
-![Demo 2](/public/assets/images/demo-2.png)
 
 Run the project
 
